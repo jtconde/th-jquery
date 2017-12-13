@@ -32,7 +32,19 @@ $('#add-pet').on('click', function()
 
     $('#posted-pets').append($newPet);
 
+    // Close button function
+    $('.close').on('click', function() {
+        $(this).parent().remove();
+    });
+
+// Reset Form
+    $name.val("");
+    $species.val("Dog");
+    $notes.val("");
+
 });
+
+
 
 // Puppy images fade in
 $('img').css('display','none').fadeIn(1600);
